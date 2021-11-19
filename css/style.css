@@ -5,6 +5,7 @@
     --hover:rgb(151, 187, 88);
     --lettering:rgb(83, 83, 83);
     --background: #f1f1f1f1;
+    --footerBackground: #cacacaf1;
 }
 
 .html {
@@ -90,16 +91,17 @@ nav a:hover::before {
 }
 
 .banner {
-    padding: 70px 40px 70px 40px;
+    padding: 40px 40px 40px 40px;
     text-align: center;
     background-image: url(../assets/overHead.jpg);
+    height: 450px;
     background-repeat: round;
     margin-top: 1px;
     color: white;
 }
 
 .banner h1 {
-    font-size: 50px;
+    font-size: 75px;
 }
 
 .banner h2 {
@@ -142,6 +144,7 @@ nav a:hover::before {
     padding: 0;
     margin: 0;
     list-style: none;
+    display: table;
 }
 
 .servFlex-item {
@@ -151,6 +154,7 @@ nav a:hover::before {
     text-shadow: 2px 2px rgba(0,0,0,0.19);
     border-top: 2px solid var(--primary);
     border-bottom: 2px solid var(--primary);
+    display: table-cell;
 }
 
 .imgFlex-container {
@@ -193,7 +197,7 @@ nav a:hover::before {
 .gal h2 {
     font-size: 50px;
     text-align: center;
-    padding: 23% 5% 3% 5%;
+    padding: 25% 5% 3% 5%;
 }
 
 
@@ -371,6 +375,7 @@ nav a:hover::before {
     float: left;
     width: 33.3%;
     padding: 8px;
+    display: table;
   }
   
  
@@ -433,7 +438,7 @@ nav a:hover::before {
 
 footer {
     text-align: center;
-    background-color: var(--background);
+    background-color: var(--footerBackground);
     padding: 2%;
 }
 
@@ -504,3 +509,109 @@ body {
       font-size: 30px;
     }
   }
+
+  @media screen and (max-width: 600px) {
+      .banner h1 {
+          font-size: 50px;
+      }
+  }
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+
+  .quoteContainer {
+      text-align: left;
+      background-color: var(--background);
+      padding: 3% 30% 3% 30%;
+  }
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+  .form-control {
+      padding: 2% 4% 2% 4%;
+      text-align: center;
+      float: initial;
+    }
+
+    .submitBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 36%;
+        margin-top: 4%;
+    }
+.quote h3 {
+    font-size: 30px;
+    text-align: center;
+    padding: 0 5% 0 5%;
+    color: var(--tertiary);
+}
+
+  .quote h2 {
+      font-size: 50px;
+      text-align: center;
+      padding: 25% 3% 3% 3%;
+  }
+
+@media screen and (max-width: 600px) {
+    .quote h2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .quoteContainer {
+        padding-left: 15%;
+    }
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    color: var(--primary);
+}
+
+.caption span.border {
+    background-color: var(--background);
+    color: var(--primary);
+    padding: 18px;
+    font-size: 50px;
+    /* letter-spacing: 10px; */
+}
